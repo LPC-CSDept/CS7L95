@@ -1,10 +1,11 @@
-def changeKey(org_dict, org_key, new_key):
+def mergeDict(dict1, dict2):
     ##################################################
     # Code your program here
     ##################################################
 
 
 def printDict(p_dict):
+
     ##################################################
     # Code your program here
     #########################################
@@ -14,17 +15,12 @@ def printDict(p_dict):
 
 
 def main():
-    emp_dict = {
-        "name": "Kelly",
-        "age": 25,
-        "salary": 8000,
-        "city": "New york"}
-
-    printDict(emp_dict)
-    org_keyval = 'city'
-    new_keyval = 'location'
-    changeKey(emp_dict, org_keyval, new_keyval)
-    printDict(emp_dict)
+    dict1 = {'name': 'KIM', 'ZIP': 94598, 'address': '1234 Grand ave'}
+    printDict(dict1)
+    dict2 = {'score': [100, 90], 'Grade': 'Senior'}
+    printDict(dict2)
+    dict3 = mergeDict(dict1, dict2)
+    printDict(dict3)
 
 
 if __name__ == '__main__':

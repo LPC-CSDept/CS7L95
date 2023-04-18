@@ -17,19 +17,16 @@ def test_main_1():
     lines = captureOut.getvalue().split('\n')
     print(lines)
 
-    emp_dict = {
-        "name": "Kelly",
-        "age": 25,
-        "salary": 8000,
-        "city": "New York"}
-    main.printDict(emp_dict)
-    org_keyval = 'city'
-    new_keyval = 'location'
-    main.changeKey(emp_dict, org_keyval, new_keyval)
-    main.printDict(emp_dict)
+    dict1 = {'name': 'KIM', 'ZIP': 94598, 'address': '1234 Grand ave'}
+    main.printDict(dict1)
+    dict2 = {'score': [100, 90], 'Grade': 'Senior'}
+    main.printDict(dict2)
+    dict3 = main.mergeDict(dict1, dict2)
+    main.printDict(dict3)
 
-    assert len(emp_dict) == 4
-    assert emp_dict['location'] == 'New York'
+    assert len(dict3) == 5
+    assert dict3['Grade'] == 'Senior'
+    assert dict3['name'] == 'KIM'
     # regex_string = r'[\w,\W]*1'
     # regex_string += r'[\w,\W]*3'
     # regex_string += r'[\w,\W]*5'
